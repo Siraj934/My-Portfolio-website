@@ -458,3 +458,27 @@ header {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(106, 0, 255, 0.4);
   transition: transform 0.3s ease;
 }
+.intro-and-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allows responsiveness */
+  gap: 20px;
+}
+
+.profile-pic img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+/* For small screens: stack vertically */
+@media (max-width: 768px) {
+  .intro-and-nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
