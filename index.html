@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <div class="intro-and-nav">
+      <div class="intro">
+        <h1>Siraj D</h1>
+        <p>B.Tech Student | Python Programmer | Full-Stack Developer</p>
+      </div>
+      <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#resume">Resume</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="profile-photo">
+      <img src="images/profileimage.img.jpg" alt="Siraj D Profile Photo" />
+    </div>
+  </div>
+</header>
+
+  <section id="about" class="about fade-in-section">
+    <h2>About Me</h2>
+    <p>
+      Motivated and detail-oriented aspiring software developer with strong foundational knowledge in Python, Django, HTML, CSS, and MySQL. Skilled in developing dynamic web applications using Django framework and building responsive front-end interfaces. Capable of integrating front-end and back-end systems, managing databases, and writing clean, maintainable code. Passionate about learning new technologies and solving real-world problems through code. Seeking an opportunity in the IT industry to contribute to meaningful projects and grow as a full-stack web developer.
+    </p>
+  </section>
+
+  <section id="skills" class="skills fade-in-section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Django</li>
+      <li>HTML & CSS</li>
+      <li>MySQL</li>
+      <li>Git and Github</li>
+    </ul>
+  </section>
+
+  <section id="education" class="education fade-in-section">
+    <h2>Education</h2>
+    <p><strong>SVR Engineering College</strong><br />
+      Bachelor of Technology (B.Tech) <br />
+      Year: 2022 - 2026
+    </p>
+    <p><strong>Rao’s Junior College</strong><br />
+      Inter(MPC) <br />
+      Year: 2020 - 2022
+    </p>
+    <p><strong>Good Shepherd E.M School</strong><br />
+      10th class(SSC) <br />
+      Year: 2019 - 2020
+    </p>
+  </section>
+  <section id="resume" class="Resume fade-in-section">
+  <h2>My Resume</h2>
+  <ul>
+    <li>
+      <strong>Resume</strong> – <a href="Resume/My Resume.pdf" target="_blank"><button>View Resume</button></a>
+    </li>
+  </ul>
+  <ul>
+  </section>
+  <section id="certificates" class="certificates fade-in-section">
+  <h2>Certificates</h2>
+  <ul>
+    <li>
+      <strong>Python Programming Internship</strong> – SkillDzire<br />
+      <a href="certificates/Darga Siraj_certificate(python).pdf" target="_blank"><button>View Certificate</button></a>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <strong>MangoDB Course Certificate</strong> – MangoDB<br />
+      <a href="https://github.com/Siraj934/MangoDB-certificates/tree/main" target="_blank"><button>View Certificate</button></a>
+    </li>
+  </ul>
+</section>
+  <section id="projects" class="projects fade-in-section">
+    <h2>Projects</h2>
+      <p><strong>1.Personal Portfolio Website</strong> - (Built using HTML, CSS,basic JavaScript and GitHub for version Control)</li></p>
+      <p>I have designed and developed a responsive personal portfolio website using HTML, CSS, and basic JavaScript. This website showcases my profile as a B.Tech student, highlighting my skills, education, resume, certifications, and interests in the IT field. The main objective of this project is to build a professional online presence and to demonstrate my web development skills.</p>
+      <strong>Key Features:</strong>
+    <ul>
+      <li>Clean and modern UI design using HTML & CSS</li>
+      <li>Responsive layout for mobile and desktop</li>
+      <li>Sections for About Me, Skills, Education, Resume, Projects, and Certificates</li>
+      <li>"View Certificate" links integrated for easy access to digital achievements</li>
+      <li>Email contact option using mailto: link</li>
+      <li>Hosted locally or on GitHub Pages</li>
+    </ul>
+      <p><strong>2.UiPath Automation Bots</strong> - (Tool used UiPath Studio, Notepad,ChatGPT,GoogleCrome)</li></p>
+      <p>Developed and deployed three automation bots using UiPath Studio:</p>
+    <ul>
+      <li><b>Bot 1:</b>Automatically writes and saves a “Hello” message in Notepad.</li>
+      <li><b>Bot 2:</b>Takes a city name input and fetches real-time weather data in Celsius.</li>
+      <li><b>Bot 3:</b>Takes a topic as input, retrieves relevant information from ChatGPT, and saves the response in Notepad.</li>
+      <p>Gained experience in RPA workflows, data input/output handling, and API integrations.</p>
+    </ul>
+    </ol>
+  </section>
+
+  <section id="contact" class="contact fade-in-section">
+    <h2>Contact</h2>
+    <p>Email:<a href="mailto:sirajdarga@gmail.com"><strong>sirajdarga@gmail.com</strong></a></p>
+    <p>LinkedIn:<a href="https://www.linkedin.com/in/darga-siraj-631069235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><strong>Darga Siraj</strong></a></p>
+    <p>GitHub:<a href="https://github.com/Siraj934?tab=repositories"><strong>siraj934</strong></a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Siraj D. All rights reserved.</p>
+  </footer>
+</body>
+<script>
+  const faders = document.querySelectorAll('.fade-in-section');
+
+  function appearOnScroll(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }
+
+  const options = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver(appearOnScroll, options);
+
+  faders.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+<script>
+  const words = ["B.Tech Student", "Python Programmer", "Full-Stack Developer"];
+  const typedSpan = document.getElementById("typed");
+  const cursorSpan = document.querySelector(".cursor");
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 120;
+  let deletingSpeed = 80;
+  let delayBetweenWords = 5000; // 5 seconds pause
+
+  function type() {
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+      typedSpan.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentWord.length) {
+        isDeleting = true;
+        setTimeout(type, delayBetweenWords);
+        return;
+      }
+    } else {
+      typedSpan.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+    }
+
+    setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(type, 800);
+  });
+</script>
+</html>
